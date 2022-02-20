@@ -82,7 +82,7 @@
         <!--Posts View Controller-->
         <scene sceneID="OuJ-Tg-E37">
             <objects>
-                <viewController storyboardIdentifier="PostsViewController" id="pEO-e3-dXD" customClass="PostsViewController" customModule="zemoga_ios_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostsViewControllerIdentifier" id="pEO-e3-dXD" customClass="PostsViewController" customModule="zemoga_ios_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tM4-KB-6Id">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
         <!--Favorites View Controller-->
         <scene sceneID="D04-ie-OTp">
             <objects>
-                <viewController storyboardIdentifier="FavoritesViewController" id="SQ1-5C-127" customClass="FavoritesViewController" customModule="zemoga_ios_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesViewControllerIdentifier" id="SQ1-5C-127" customClass="FavoritesViewController" customModule="zemoga_ios_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WOT-bx-1Do">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
