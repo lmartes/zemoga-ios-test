@@ -4,11 +4,14 @@ class ListPostViewController: UIViewController {
     @IBOutlet weak var postSegmentedControl: UISegmentedControl!
     @IBOutlet weak var listPostContentView: UIView!
     
+    var presenter: ViewToPresenterListPostProtocol?
     private var postsViewController: UIViewController? = nil
     private var favoritesViewController: UIViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ListPostRouter.createListPostModule(listPostDetailReference: self)
+        presenter?.startFetchigPostList()
         setupView()
     }
     
@@ -108,5 +111,18 @@ class ListPostViewController: UIViewController {
         return [topConstraint, traillingConstraint, bottomConstraint, leadingConstraint]
     }
 
+}
+
+//MARK: - PresenterToView
+extension ListPostViewController: PresenterToViewListPostProtocol {
+    func showPostList(with posts: [PostEntity]) {
+        print("Showing post list")
+    }
+    
+    func showError(_ error: Error) {
+        print("show error post list")
+    }
+    
+    
 }
 
