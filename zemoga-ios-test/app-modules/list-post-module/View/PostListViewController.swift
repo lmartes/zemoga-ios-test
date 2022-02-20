@@ -22,8 +22,8 @@ class PostListViewController: UIViewController {
     
     private func setupSegmentedControl() {
         postSegmentedControl.removeAllSegments()
-        postSegmentedControl.insertSegment(withTitle: "All", at: 0, animated: false)
-        postSegmentedControl.insertSegment(withTitle: "Favorites", at: 1, animated: false)
+        postSegmentedControl.insertSegment(withTitle: titles.allPost.rawValue, at: 0, animated: false)
+        postSegmentedControl.insertSegment(withTitle: titles.favoritesPost.rawValue, at: 1, animated: false)
         postSegmentedControl.selectedSegmentIndex = 0
         postSegmentedControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
         postSegmentedControl.backgroundColor = .clear
@@ -31,11 +31,11 @@ class PostListViewController: UIViewController {
         postSegmentedControl.layer.borderWidth = 1
         postSegmentedControl.layer.borderColor = UIColor.systemGreen.cgColor
         postSegmentedControl.setTitleTextAttributes(
-            [NSAttributedString.Key.font : UIFont(name: "Lato-Regular", size: 16)!,
+            [NSAttributedString.Key.font : UIFont(name: LatoFonts.regular, size: 16)!,
              NSAttributedString.Key.foregroundColor: UIColor.systemGreen],
             for: .normal)
         postSegmentedControl.setTitleTextAttributes(
-            [NSAttributedString.Key.font : UIFont(name: "Lato-Regular", size: 16)!,
+            [NSAttributedString.Key.font : UIFont(name: LatoFonts.regular, size: 16)!,
              NSAttributedString.Key.foregroundColor: UIColor.systemBackground],
             for: .selected)
     }
@@ -64,7 +64,7 @@ class PostListViewController: UIViewController {
         }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let childViewController = storyboard.instantiateViewController(withIdentifier: "PostsViewController")
+        let childViewController = storyboard.instantiateViewController(withIdentifier: Identifier.postsViewController)
         
         postsViewController = childViewController
         return postsViewController!
@@ -80,7 +80,7 @@ class PostListViewController: UIViewController {
             return favoritesViewController!
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let childViewController = storyboard.instantiateViewController(withIdentifier: "FavoritesViewController")
+        let childViewController = storyboard.instantiateViewController(withIdentifier: Identifier.favoritesViewController)
         
         favoritesViewController = childViewController
         return favoritesViewController!
@@ -122,7 +122,6 @@ extension PostListViewController: PresenterToViewPostListProtocol {
     func showError(_ error: Error) {
         print("show error post list")
     }
-    
     
 }
 

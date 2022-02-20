@@ -6,7 +6,6 @@ class PostListInteractor: PresenterToInteractorPostListProtocol {
     var presenter: InteractorToPresenterPostListProtocol?
     
     func fetchPostList() {
-        print("Get list post...")
         AF.request(API_POST_LIST).response { (response) in
             self.handleResponse(requestResponse: response)
         }
@@ -19,8 +18,17 @@ class PostListInteractor: PresenterToInteractorPostListProtocol {
         }
         
         if let data = requestResponse.data {
-            print("data: ", data)
+            presenter?.postListFetchedSuccess(posts: parseJSON(data))
         }
+    }
+    
+    private func parseJSON(_ postListData: Data) -> [PostEntity] {
+        let data = String(decoding: postListData, as: UTF8.self)
+        guard let decoderData = Mapper<PostEntity>().mapArray(JSONString: data) else {
+            print("parseJSON Error: Could not map response")
+            return []
+        }
+        return decoderData
     }
     
 }
