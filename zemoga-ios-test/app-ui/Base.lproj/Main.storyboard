@@ -82,14 +82,15 @@
         <!--Posts View Controller-->
         <scene sceneID="OuJ-Tg-E37">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aST-dg-zl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PostsViewController" id="pEO-e3-dXD" customClass="PostsViewController" customModule="zemoga_ios_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tM4-KB-6Id">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dm0-xh-vbB"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aST-dg-zl8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2078" y="-293"/>
         </scene>
