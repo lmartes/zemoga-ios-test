@@ -10,21 +10,47 @@
 		2FB262D3C4E62C1D9BD388B2 /* Pods_zemoga_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF43D27E489872C0DB0FEFAD /* Pods_zemoga_ios_test.framework */; };
 		8475336227C16849001D8662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336127C16849001D8662 /* AppDelegate.swift */; };
 		8475336427C16849001D8662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336327C16849001D8662 /* SceneDelegate.swift */; };
-		8475336627C16849001D8662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336527C16849001D8662 /* ViewController.swift */; };
+		8475336627C16849001D8662 /* ListPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336527C16849001D8662 /* ListPostViewController.swift */; };
 		8475336927C16849001D8662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8475336727C16849001D8662 /* Main.storyboard */; };
 		8475336B27C1684A001D8662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8475336A27C1684A001D8662 /* Assets.xcassets */; };
 		8475336E27C1684A001D8662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8475336C27C1684A001D8662 /* LaunchScreen.storyboard */; };
+		84B3ABC727C1B3B8009C1B2C /* ListPostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC627C1B3B8009C1B2C /* ListPostProtocols.swift */; };
+		84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC827C1D993009C1B2C /* PostsViewController.swift */; };
+		84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */; };
+		84B3ABF527C1EDC9009C1B2C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */; };
+		84B3ABF627C1EDC9009C1B2C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEC27C1EDC8009C1B2C /* Lato-Bold.ttf */; };
+		84B3ABF727C1EDC9009C1B2C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABED27C1EDC8009C1B2C /* Lato-Regular.ttf */; };
+		84B3ABF827C1EDC9009C1B2C /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEE27C1EDC8009C1B2C /* Lato-BlackItalic.ttf */; };
+		84B3ABF927C1EDC9009C1B2C /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEF27C1EDC9009C1B2C /* Lato-Light.ttf */; };
+		84B3ABFA27C1EDC9009C1B2C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF027C1EDC9009C1B2C /* Lato-LightItalic.ttf */; };
+		84B3ABFB27C1EDC9009C1B2C /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF127C1EDC9009C1B2C /* Lato-Thin.ttf */; };
+		84B3ABFC27C1EDC9009C1B2C /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF227C1EDC9009C1B2C /* Lato-Italic.ttf */; };
+		84B3ABFD27C1EDC9009C1B2C /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF327C1EDC9009C1B2C /* Lato-ThinItalic.ttf */; };
+		84B3ABFE27C1EDC9009C1B2C /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF427C1EDC9009C1B2C /* Lato-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8475335E27C16849001D8662 /* zemoga-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zemoga-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8475336127C16849001D8662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8475336327C16849001D8662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8475336527C16849001D8662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8475336527C16849001D8662 /* ListPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostViewController.swift; sourceTree = "<group>"; };
 		8475336827C16849001D8662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8475336A27C1684A001D8662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8475336D27C1684A001D8662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8475336F27C1684A001D8662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B3ABC627C1B3B8009C1B2C /* ListPostProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostProtocols.swift; sourceTree = "<group>"; };
+		84B3ABC827C1D993009C1B2C /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		84B3ABEC27C1EDC8009C1B2C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		84B3ABED27C1EDC8009C1B2C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		84B3ABEE27C1EDC8009C1B2C /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		84B3ABEF27C1EDC9009C1B2C /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		84B3ABF027C1EDC9009C1B2C /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		84B3ABF127C1EDC9009C1B2C /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		84B3ABF227C1EDC9009C1B2C /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		84B3ABF327C1EDC9009C1B2C /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		84B3ABF427C1EDC9009C1B2C /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E06F7BB3493CD14BC5153348 /* Pods-zemoga-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zemoga-ios-test.release.xcconfig"; path = "Target Support Files/Pods-zemoga-ios-test/Pods-zemoga-ios-test.release.xcconfig"; sourceTree = "<group>"; };
 		EF43D27E489872C0DB0FEFAD /* Pods_zemoga_ios_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zemoga_ios_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F936A1E52D8092CD9F8E0A0A /* Pods-zemoga-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zemoga-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-zemoga-ios-test/Pods-zemoga-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				8475336027C16849001D8662 /* zemoga-ios-test */,
+				84B3ABCC27C1E84B009C1B2C /* common-utils */,
 				8475335F27C16849001D8662 /* Products */,
 				CBFBAF5A4F657D59497F2E07 /* Pods */,
 				DB438C597980A68D8424F23A /* Frameworks */,
@@ -93,9 +120,69 @@
 		8475337727C16995001D8662 /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
-				8475336527C16849001D8662 /* ViewController.swift */,
+				84B3ABC327C1B33E009C1B2C /* list-post-module */,
 			);
 			path = "app-modules";
+			sourceTree = "<group>";
+		};
+		84B3ABC327C1B33E009C1B2C /* list-post-module */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABC527C1B39C009C1B2C /* Protocols */,
+				84B3ABC427C1B355009C1B2C /* View */,
+			);
+			path = "list-post-module";
+			sourceTree = "<group>";
+		};
+		84B3ABC427C1B355009C1B2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8475336527C16849001D8662 /* ListPostViewController.swift */,
+				84B3ABC827C1D993009C1B2C /* PostsViewController.swift */,
+				84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84B3ABC527C1B39C009C1B2C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABC627C1B3B8009C1B2C /* ListPostProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84B3ABCC27C1E84B009C1B2C /* common-utils */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABCD27C1E871009C1B2C /* ui-utils */,
+			);
+			path = "common-utils";
+			sourceTree = "<group>";
+		};
+		84B3ABCD27C1E871009C1B2C /* ui-utils */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABFF27C1EDE8009C1B2C /* Lato Fonts */,
+			);
+			path = "ui-utils";
+			sourceTree = "<group>";
+		};
+		84B3ABFF27C1EDE8009C1B2C /* Lato Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */,
+				84B3ABEE27C1EDC8009C1B2C /* Lato-BlackItalic.ttf */,
+				84B3ABEC27C1EDC8009C1B2C /* Lato-Bold.ttf */,
+				84B3ABF427C1EDC9009C1B2C /* Lato-BoldItalic.ttf */,
+				84B3ABF227C1EDC9009C1B2C /* Lato-Italic.ttf */,
+				84B3ABEF27C1EDC9009C1B2C /* Lato-Light.ttf */,
+				84B3ABF027C1EDC9009C1B2C /* Lato-LightItalic.ttf */,
+				84B3ABED27C1EDC8009C1B2C /* Lato-Regular.ttf */,
+				84B3ABF127C1EDC9009C1B2C /* Lato-Thin.ttf */,
+				84B3ABF327C1EDC9009C1B2C /* Lato-ThinItalic.ttf */,
+			);
+			path = "Lato Fonts";
 			sourceTree = "<group>";
 		};
 		CBFBAF5A4F657D59497F2E07 /* Pods */ = {
@@ -104,7 +191,6 @@
 				F936A1E52D8092CD9F8E0A0A /* Pods-zemoga-ios-test.debug.xcconfig */,
 				E06F7BB3493CD14BC5153348 /* Pods-zemoga-ios-test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,9 +262,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B3ABF527C1EDC9009C1B2C /* Lato-Black.ttf in Resources */,
+				84B3ABFD27C1EDC9009C1B2C /* Lato-ThinItalic.ttf in Resources */,
+				84B3ABF727C1EDC9009C1B2C /* Lato-Regular.ttf in Resources */,
+				84B3ABF827C1EDC9009C1B2C /* Lato-BlackItalic.ttf in Resources */,
+				84B3ABF627C1EDC9009C1B2C /* Lato-Bold.ttf in Resources */,
+				84B3ABFC27C1EDC9009C1B2C /* Lato-Italic.ttf in Resources */,
 				8475336E27C1684A001D8662 /* LaunchScreen.storyboard in Resources */,
 				8475336B27C1684A001D8662 /* Assets.xcassets in Resources */,
 				8475336927C16849001D8662 /* Main.storyboard in Resources */,
+				84B3ABFB27C1EDC9009C1B2C /* Lato-Thin.ttf in Resources */,
+				84B3ABFA27C1EDC9009C1B2C /* Lato-LightItalic.ttf in Resources */,
+				84B3ABF927C1EDC9009C1B2C /* Lato-Light.ttf in Resources */,
+				84B3ABFE27C1EDC9009C1B2C /* Lato-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,9 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8475336627C16849001D8662 /* ViewController.swift in Sources */,
+				8475336627C16849001D8662 /* ListPostViewController.swift in Sources */,
+				84B3ABC727C1B3B8009C1B2C /* ListPostProtocols.swift in Sources */,
 				8475336227C16849001D8662 /* AppDelegate.swift in Sources */,
 				8475336427C16849001D8662 /* SceneDelegate.swift in Sources */,
+				84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */,
+				84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
