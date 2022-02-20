@@ -1,16 +1,16 @@
 import UIKit
 
-class ListPostViewController: UIViewController {
+class PostListViewController: UIViewController {
     @IBOutlet weak var postSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var listPostContentView: UIView!
+    @IBOutlet weak var postListContentView: UIView!
     
-    var presenter: ViewToPresenterListPostProtocol?
+    var presenter: ViewToPresenterPostListProtocol?
     private var postsViewController: UIViewController? = nil
     private var favoritesViewController: UIViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ListPostRouter.createListPostModule(listPostDetailReference: self)
+        PostListRouter.createPostListModule(postListReference: self)
         presenter?.startFetchigPostList()
         setupView()
     }
@@ -97,24 +97,24 @@ class ListPostViewController: UIViewController {
     
     private func addContentView(_ viewController: UIViewController) {
         addChild(viewController)
-        listPostContentView.addSubview(viewController.view)
+        postListContentView.addSubview(viewController.view)
         viewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(screenConstraintsForContentView(viewController))
         viewController.didMove(toParent: self)
     }
     
     private func screenConstraintsForContentView(_ childViewController: UIViewController) -> [NSLayoutConstraint] {
-        let topConstraint = childViewController.view.topAnchor.constraint(equalTo: listPostContentView.topAnchor)
-        let leadingConstraint = childViewController.view.leadingAnchor.constraint(equalTo: listPostContentView.leadingAnchor)
-        let bottomConstraint = listPostContentView.bottomAnchor.constraint(equalTo: childViewController.view.bottomAnchor)
-        let traillingConstraint = listPostContentView.trailingAnchor.constraint(equalTo: childViewController.view.trailingAnchor)
+        let topConstraint = childViewController.view.topAnchor.constraint(equalTo: postListContentView.topAnchor)
+        let leadingConstraint = childViewController.view.leadingAnchor.constraint(equalTo: postListContentView.leadingAnchor)
+        let bottomConstraint = postListContentView.bottomAnchor.constraint(equalTo: childViewController.view.bottomAnchor)
+        let traillingConstraint = postListContentView.trailingAnchor.constraint(equalTo: childViewController.view.trailingAnchor)
         return [topConstraint, traillingConstraint, bottomConstraint, leadingConstraint]
     }
 
 }
 
 //MARK: - PresenterToView
-extension ListPostViewController: PresenterToViewListPostProtocol {
+extension PostListViewController: PresenterToViewPostListProtocol {
     func showPostList(with posts: [PostEntity]) {
         print("Showing post list")
     }

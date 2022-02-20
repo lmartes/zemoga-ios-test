@@ -10,16 +10,16 @@
 		2FB262D3C4E62C1D9BD388B2 /* Pods_zemoga_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF43D27E489872C0DB0FEFAD /* Pods_zemoga_ios_test.framework */; };
 		8475336227C16849001D8662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336127C16849001D8662 /* AppDelegate.swift */; };
 		8475336427C16849001D8662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336327C16849001D8662 /* SceneDelegate.swift */; };
-		8475336627C16849001D8662 /* ListPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336527C16849001D8662 /* ListPostViewController.swift */; };
+		8475336627C16849001D8662 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336527C16849001D8662 /* PostListViewController.swift */; };
 		8475336927C16849001D8662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8475336727C16849001D8662 /* Main.storyboard */; };
 		8475336B27C1684A001D8662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8475336A27C1684A001D8662 /* Assets.xcassets */; };
 		8475336E27C1684A001D8662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8475336C27C1684A001D8662 /* LaunchScreen.storyboard */; };
-		847CBCA727C2B05C0010C052 /* ListPostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCA627C2B05C0010C052 /* ListPostInteractor.swift */; };
-		847CBCA927C2B06A0010C052 /* ListPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCA827C2B06A0010C052 /* ListPostPresenter.swift */; };
+		847CBCA727C2B05C0010C052 /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCA627C2B05C0010C052 /* PostListInteractor.swift */; };
+		847CBCA927C2B06A0010C052 /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCA827C2B06A0010C052 /* PostListPresenter.swift */; };
 		847CBCAB27C2B07A0010C052 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAA27C2B07A0010C052 /* PostEntity.swift */; };
-		847CBCAD27C2B0800010C052 /* ListPostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAC27C2B0800010C052 /* ListPostRouter.swift */; };
+		847CBCAD27C2B0800010C052 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAC27C2B0800010C052 /* PostListRouter.swift */; };
 		847CBCAF27C2D3170010C052 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAE27C2D3170010C052 /* AppConstants.swift */; };
-		84B3ABC727C1B3B8009C1B2C /* ListPostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC627C1B3B8009C1B2C /* ListPostProtocols.swift */; };
+		84B3ABC727C1B3B8009C1B2C /* PostListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */; };
 		84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC827C1D993009C1B2C /* PostsViewController.swift */; };
 		84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */; };
 		84B3ABF527C1EDC9009C1B2C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */; };
@@ -38,17 +38,17 @@
 		8475335E27C16849001D8662 /* zemoga-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zemoga-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8475336127C16849001D8662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8475336327C16849001D8662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8475336527C16849001D8662 /* ListPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostViewController.swift; sourceTree = "<group>"; };
+		8475336527C16849001D8662 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		8475336827C16849001D8662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8475336A27C1684A001D8662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8475336D27C1684A001D8662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8475336F27C1684A001D8662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		847CBCA627C2B05C0010C052 /* ListPostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostInteractor.swift; sourceTree = "<group>"; };
-		847CBCA827C2B06A0010C052 /* ListPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostPresenter.swift; sourceTree = "<group>"; };
+		847CBCA627C2B05C0010C052 /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
+		847CBCA827C2B06A0010C052 /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
 		847CBCAA27C2B07A0010C052 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
-		847CBCAC27C2B0800010C052 /* ListPostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostRouter.swift; sourceTree = "<group>"; };
+		847CBCAC27C2B0800010C052 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
 		847CBCAE27C2D3170010C052 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		84B3ABC627C1B3B8009C1B2C /* ListPostProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostProtocols.swift; sourceTree = "<group>"; };
+		84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListProtocols.swift; sourceTree = "<group>"; };
 		84B3ABC827C1D993009C1B2C /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		847CBCA227C2AF8F0010C052 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				847CBCA627C2B05C0010C052 /* ListPostInteractor.swift */,
+				847CBCA627C2B05C0010C052 /* PostListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 		847CBCA327C2AFBC0010C052 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				847CBCA827C2B06A0010C052 /* ListPostPresenter.swift */,
+				847CBCA827C2B06A0010C052 /* PostListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 		847CBCA527C2B0230010C052 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				847CBCAC27C2B0800010C052 /* ListPostRouter.swift */,
+				847CBCAC27C2B0800010C052 /* PostListRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 		84B3ABC427C1B355009C1B2C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8475336527C16849001D8662 /* ListPostViewController.swift */,
+				8475336527C16849001D8662 /* PostListViewController.swift */,
 				84B3ABC827C1D993009C1B2C /* PostsViewController.swift */,
 				84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */,
 			);
@@ -193,7 +193,7 @@
 		84B3ABC527C1B39C009C1B2C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				84B3ABC627C1B3B8009C1B2C /* ListPostProtocols.swift */,
+				84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -382,14 +382,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8475336627C16849001D8662 /* ListPostViewController.swift in Sources */,
-				84B3ABC727C1B3B8009C1B2C /* ListPostProtocols.swift in Sources */,
-				847CBCA727C2B05C0010C052 /* ListPostInteractor.swift in Sources */,
+				8475336627C16849001D8662 /* PostListViewController.swift in Sources */,
+				84B3ABC727C1B3B8009C1B2C /* PostListProtocols.swift in Sources */,
+				847CBCA727C2B05C0010C052 /* PostListInteractor.swift in Sources */,
 				847CBCAF27C2D3170010C052 /* AppConstants.swift in Sources */,
 				8475336227C16849001D8662 /* AppDelegate.swift in Sources */,
 				847CBCAB27C2B07A0010C052 /* PostEntity.swift in Sources */,
-				847CBCAD27C2B0800010C052 /* ListPostRouter.swift in Sources */,
-				847CBCA927C2B06A0010C052 /* ListPostPresenter.swift in Sources */,
+				847CBCAD27C2B0800010C052 /* PostListRouter.swift in Sources */,
+				847CBCA927C2B06A0010C052 /* PostListPresenter.swift in Sources */,
 				8475336427C16849001D8662 /* SceneDelegate.swift in Sources */,
 				84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */,
 				84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */,

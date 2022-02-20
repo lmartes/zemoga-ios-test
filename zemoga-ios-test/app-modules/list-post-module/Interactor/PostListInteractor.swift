@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-class ListPostInteractor: PresenterToInteractorPostListProtocol {
+class PostListInteractor: PresenterToInteractorPostListProtocol {
     var presenter: InteractorToPresenterPostListProtocol?
     
     func fetchPostList() {
@@ -14,7 +14,7 @@ class ListPostInteractor: PresenterToInteractorPostListProtocol {
     
     private func handleResponse(requestResponse: AFDataResponse<Data?>) {
         if let error = requestResponse.error {
-            presenter?.listPostFetchFailed(with: error)
+            presenter?.postListFetchFailed(with: error)
             return
         }
         
