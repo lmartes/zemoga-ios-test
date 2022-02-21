@@ -6,6 +6,7 @@ struct PostEntity: Mappable {
     private var id: Int = 0
     private var title: String = ""
     private var body: String = ""
+    private var status: PostStatus = .pendingReview
     
     init?(map: Map) {}
     
@@ -14,6 +15,7 @@ struct PostEntity: Mappable {
         id <- map["id"]
         title <- map["title"]
         body <- map["body"]
+        status <- map["status"]
     }
     
     func getUserId() -> Int {
@@ -30,6 +32,14 @@ struct PostEntity: Mappable {
     
     func getBody() -> String {
         return body
+    }
+    
+    mutating func setStatus(_ status: PostStatus) {
+        self.status = status
+    }
+    
+    func getStatus() -> PostStatus {
+        return status
     }
     
 }
