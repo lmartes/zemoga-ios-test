@@ -7,23 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FB262D3C4E62C1D9BD388B2 /* Pods_zemoga_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF43D27E489872C0DB0FEFAD /* Pods_zemoga_ios_test.framework */; };
+		8474393227C3E0E700F9C50F /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474393127C3E0E700F9C50F /* Extension + String.swift */; };
+		8474393527C3E8BA00F9C50F /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474393427C3E8BA00F9C50F /* CommentsTableViewCell.swift */; };
+		8474393727C40E5B00F9C50F /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474393627C40E5B00F9C50F /* FavoritesTableViewCell.swift */; };
 		8475336227C16849001D8662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336127C16849001D8662 /* AppDelegate.swift */; };
 		8475336427C16849001D8662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336327C16849001D8662 /* SceneDelegate.swift */; };
-		8475336627C16849001D8662 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336527C16849001D8662 /* ViewController.swift */; };
+		8475336627C16849001D8662 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336527C16849001D8662 /* PostListViewController.swift */; };
 		8475336927C16849001D8662 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8475336727C16849001D8662 /* Main.storyboard */; };
 		8475336B27C1684A001D8662 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8475336A27C1684A001D8662 /* Assets.xcassets */; };
 		8475336E27C1684A001D8662 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8475336C27C1684A001D8662 /* LaunchScreen.storyboard */; };
+		847CBCA727C2B05C0010C052 /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCA627C2B05C0010C052 /* PostListInteractor.swift */; };
+		847CBCA927C2B06A0010C052 /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCA827C2B06A0010C052 /* PostListPresenter.swift */; };
+		847CBCAB27C2B07A0010C052 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAA27C2B07A0010C052 /* PostEntity.swift */; };
+		847CBCAD27C2B0800010C052 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAC27C2B0800010C052 /* PostListRouter.swift */; };
+		847CBCAF27C2D3170010C052 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAE27C2D3170010C052 /* AppConstants.swift */; };
+		847CBCB227C343A40010C052 /* PersistenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCB127C343A40010C052 /* PersistenceUtils.swift */; };
+		847CBCB627C34DAE0010C052 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCB527C34DAE0010C052 /* PostsTableViewCell.swift */; };
+		847CBCB827C358FA0010C052 /* PostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCB727C358FA0010C052 /* PostStatus.swift */; };
+		847CBCC127C37A9D0010C052 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCC027C37A9D0010C052 /* PostDetailViewController.swift */; };
+		847CBCC327C37CC10010C052 /* PostDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCC227C37CC10010C052 /* PostDetailProtocols.swift */; };
+		847CBCC527C384EB0010C052 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCC427C384EB0010C052 /* UserEntity.swift */; };
+		847CBCC727C385240010C052 /* CommentsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCC627C385230010C052 /* CommentsEntity.swift */; };
+		847CBCC927C388680010C052 /* PostDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCC827C388680010C052 /* PostDetailsRouter.swift */; };
+		847CBCCB27C388E70010C052 /* PostDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCCA27C388E70010C052 /* PostDetailPresenter.swift */; };
+		847CBCCD27C38A850010C052 /* PostDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCCC27C38A850010C052 /* PostDetailInteractor.swift */; };
+		84B3ABC727C1B3B8009C1B2C /* PostListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */; };
+		84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC827C1D993009C1B2C /* PostsViewController.swift */; };
+		84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */; };
+		84B3ABF527C1EDC9009C1B2C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */; };
+		84B3ABF627C1EDC9009C1B2C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEC27C1EDC8009C1B2C /* Lato-Bold.ttf */; };
+		84B3ABF727C1EDC9009C1B2C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABED27C1EDC8009C1B2C /* Lato-Regular.ttf */; };
+		84B3ABF827C1EDC9009C1B2C /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEE27C1EDC8009C1B2C /* Lato-BlackItalic.ttf */; };
+		84B3ABF927C1EDC9009C1B2C /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABEF27C1EDC9009C1B2C /* Lato-Light.ttf */; };
+		84B3ABFA27C1EDC9009C1B2C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF027C1EDC9009C1B2C /* Lato-LightItalic.ttf */; };
+		84B3ABFB27C1EDC9009C1B2C /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF127C1EDC9009C1B2C /* Lato-Thin.ttf */; };
+		84B3ABFC27C1EDC9009C1B2C /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF227C1EDC9009C1B2C /* Lato-Italic.ttf */; };
+		84B3ABFD27C1EDC9009C1B2C /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF327C1EDC9009C1B2C /* Lato-ThinItalic.ttf */; };
+		84B3ABFE27C1EDC9009C1B2C /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B3ABF427C1EDC9009C1B2C /* Lato-BoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8474393127C3E0E700F9C50F /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
+		8474393427C3E8BA00F9C50F /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		8474393627C40E5B00F9C50F /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		8475335E27C16849001D8662 /* zemoga-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zemoga-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8475336127C16849001D8662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8475336327C16849001D8662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8475336527C16849001D8662 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8475336527C16849001D8662 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		8475336827C16849001D8662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8475336A27C1684A001D8662 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8475336D27C1684A001D8662 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8475336F27C1684A001D8662 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847CBCA627C2B05C0010C052 /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
+		847CBCA827C2B06A0010C052 /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
+		847CBCAA27C2B07A0010C052 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
+		847CBCAC27C2B0800010C052 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
+		847CBCAE27C2D3170010C052 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		847CBCB127C343A40010C052 /* PersistenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUtils.swift; sourceTree = "<group>"; };
+		847CBCB527C34DAE0010C052 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		847CBCB727C358FA0010C052 /* PostStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStatus.swift; sourceTree = "<group>"; };
+		847CBCC027C37A9D0010C052 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		847CBCC227C37CC10010C052 /* PostDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailProtocols.swift; sourceTree = "<group>"; };
+		847CBCC427C384EB0010C052 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		847CBCC627C385230010C052 /* CommentsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsEntity.swift; sourceTree = "<group>"; };
+		847CBCC827C388680010C052 /* PostDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsRouter.swift; sourceTree = "<group>"; };
+		847CBCCA27C388E70010C052 /* PostDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailPresenter.swift; sourceTree = "<group>"; };
+		847CBCCC27C38A850010C052 /* PostDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailInteractor.swift; sourceTree = "<group>"; };
+		84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListProtocols.swift; sourceTree = "<group>"; };
+		84B3ABC827C1D993009C1B2C /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		84B3ABEC27C1EDC8009C1B2C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		84B3ABED27C1EDC8009C1B2C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		84B3ABEE27C1EDC8009C1B2C /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		84B3ABEF27C1EDC9009C1B2C /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		84B3ABF027C1EDC9009C1B2C /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		84B3ABF127C1EDC9009C1B2C /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		84B3ABF227C1EDC9009C1B2C /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		84B3ABF327C1EDC9009C1B2C /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		84B3ABF427C1EDC9009C1B2C /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E06F7BB3493CD14BC5153348 /* Pods-zemoga-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zemoga-ios-test.release.xcconfig"; path = "Target Support Files/Pods-zemoga-ios-test/Pods-zemoga-ios-test.release.xcconfig"; sourceTree = "<group>"; };
+		EF43D27E489872C0DB0FEFAD /* Pods_zemoga_ios_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zemoga_ios_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F936A1E52D8092CD9F8E0A0A /* Pods-zemoga-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zemoga-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-zemoga-ios-test/Pods-zemoga-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +97,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB262D3C4E62C1D9BD388B2 /* Pods_zemoga_ios_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8474393027C3E0B800F9C50F /* app-extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8474393127C3E0E700F9C50F /* Extension + String.swift */,
+			);
+			path = "app-extensions";
+			sourceTree = "<group>";
+		};
+		8474393327C3E89A00F9C50F /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				8474393427C3E8BA00F9C50F /* CommentsTableViewCell.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
 		8475335527C16849001D8662 = {
 			isa = PBXGroup;
 			children = (
 				8475336027C16849001D8662 /* zemoga-ios-test */,
+				84B3ABCC27C1E84B009C1B2C /* common-utils */,
 				8475335F27C16849001D8662 /* Products */,
+				CBFBAF5A4F657D59497F2E07 /* Pods */,
+				DB438C597980A68D8424F23A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +172,224 @@
 		8475337727C16995001D8662 /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
-				8475336527C16849001D8662 /* ViewController.swift */,
+				84B3ABC327C1B33E009C1B2C /* list-post-module */,
+				847CBCB927C379480010C052 /* post-detail-module */,
 			);
 			path = "app-modules";
+			sourceTree = "<group>";
+		};
+		847CBCA227C2AF8F0010C052 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCA627C2B05C0010C052 /* PostListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		847CBCA327C2AFBC0010C052 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCA827C2B06A0010C052 /* PostListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		847CBCA427C2B00A0010C052 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCAA27C2B07A0010C052 /* PostEntity.swift */,
+				847CBCB727C358FA0010C052 /* PostStatus.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		847CBCA527C2B0230010C052 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCAC27C2B0800010C052 /* PostListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		847CBCB027C3437B0010C052 /* app-defaults */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCB127C343A40010C052 /* PersistenceUtils.swift */,
+			);
+			path = "app-defaults";
+			sourceTree = "<group>";
+		};
+		847CBCB327C34D710010C052 /* All Posts */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABC827C1D993009C1B2C /* PostsViewController.swift */,
+				847CBCB527C34DAE0010C052 /* PostsTableViewCell.swift */,
+			);
+			path = "All Posts";
+			sourceTree = "<group>";
+		};
+		847CBCB427C34D7D0010C052 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */,
+				8474393627C40E5B00F9C50F /* FavoritesTableViewCell.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		847CBCB927C379480010C052 /* post-detail-module */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCBF27C37A280010C052 /* Protocols */,
+				847CBCBE27C37A230010C052 /* View */,
+				847CBCBD27C37A190010C052 /* Interactor */,
+				847CBCBC27C37A120010C052 /* Presenter */,
+				847CBCBB27C37A0A0010C052 /* Entity */,
+				847CBCBA27C37A030010C052 /* Router */,
+			);
+			path = "post-detail-module";
+			sourceTree = "<group>";
+		};
+		847CBCBA27C37A030010C052 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCC827C388680010C052 /* PostDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		847CBCBB27C37A0A0010C052 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCC427C384EB0010C052 /* UserEntity.swift */,
+				847CBCC627C385230010C052 /* CommentsEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		847CBCBC27C37A120010C052 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCCA27C388E70010C052 /* PostDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		847CBCBD27C37A190010C052 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCCC27C38A850010C052 /* PostDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		847CBCBE27C37A230010C052 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCC027C37A9D0010C052 /* PostDetailViewController.swift */,
+				8474393327C3E89A00F9C50F /* Comments */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		847CBCBF27C37A280010C052 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCC227C37CC10010C052 /* PostDetailProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84B3ABC327C1B33E009C1B2C /* list-post-module */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABC527C1B39C009C1B2C /* Protocols */,
+				84B3ABC427C1B355009C1B2C /* View */,
+				847CBCA227C2AF8F0010C052 /* Interactor */,
+				847CBCA327C2AFBC0010C052 /* Presenter */,
+				847CBCA427C2B00A0010C052 /* Entity */,
+				847CBCA527C2B0230010C052 /* Router */,
+			);
+			path = "list-post-module";
+			sourceTree = "<group>";
+		};
+		84B3ABC427C1B355009C1B2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8475336527C16849001D8662 /* PostListViewController.swift */,
+				847CBCB327C34D710010C052 /* All Posts */,
+				847CBCB427C34D7D0010C052 /* Favorites */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84B3ABC527C1B39C009C1B2C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84B3ABCC27C1E84B009C1B2C /* common-utils */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABCD27C1E871009C1B2C /* ui-utils */,
+				84B3AC0027C204F1009C1B2C /* app-constants */,
+				847CBCB027C3437B0010C052 /* app-defaults */,
+				8474393027C3E0B800F9C50F /* app-extensions */,
+			);
+			path = "common-utils";
+			sourceTree = "<group>";
+		};
+		84B3ABCD27C1E871009C1B2C /* ui-utils */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABFF27C1EDE8009C1B2C /* Lato Fonts */,
+			);
+			path = "ui-utils";
+			sourceTree = "<group>";
+		};
+		84B3ABFF27C1EDE8009C1B2C /* Lato Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABEB27C1EDC8009C1B2C /* Lato-Black.ttf */,
+				84B3ABEE27C1EDC8009C1B2C /* Lato-BlackItalic.ttf */,
+				84B3ABEC27C1EDC8009C1B2C /* Lato-Bold.ttf */,
+				84B3ABF427C1EDC9009C1B2C /* Lato-BoldItalic.ttf */,
+				84B3ABF227C1EDC9009C1B2C /* Lato-Italic.ttf */,
+				84B3ABEF27C1EDC9009C1B2C /* Lato-Light.ttf */,
+				84B3ABF027C1EDC9009C1B2C /* Lato-LightItalic.ttf */,
+				84B3ABED27C1EDC8009C1B2C /* Lato-Regular.ttf */,
+				84B3ABF127C1EDC9009C1B2C /* Lato-Thin.ttf */,
+				84B3ABF327C1EDC9009C1B2C /* Lato-ThinItalic.ttf */,
+			);
+			path = "Lato Fonts";
+			sourceTree = "<group>";
+		};
+		84B3AC0027C204F1009C1B2C /* app-constants */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCAE27C2D3170010C052 /* AppConstants.swift */,
+			);
+			path = "app-constants";
+			sourceTree = "<group>";
+		};
+		CBFBAF5A4F657D59497F2E07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F936A1E52D8092CD9F8E0A0A /* Pods-zemoga-ios-test.debug.xcconfig */,
+				E06F7BB3493CD14BC5153348 /* Pods-zemoga-ios-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB438C597980A68D8424F23A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF43D27E489872C0DB0FEFAD /* Pods_zemoga_ios_test.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +399,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8475337227C1684A001D8662 /* Build configuration list for PBXNativeTarget "zemoga-ios-test" */;
 			buildPhases = (
+				5B531C47A0260B2A9F01B349 /* [CP] Check Pods Manifest.lock */,
 				8475335A27C16849001D8662 /* Sources */,
 				8475335B27C16849001D8662 /* Frameworks */,
 				8475335C27C16849001D8662 /* Resources */,
+				93EB602E56F9B4D030F7228E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,22 +452,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B3ABF527C1EDC9009C1B2C /* Lato-Black.ttf in Resources */,
+				84B3ABFD27C1EDC9009C1B2C /* Lato-ThinItalic.ttf in Resources */,
+				84B3ABF727C1EDC9009C1B2C /* Lato-Regular.ttf in Resources */,
+				84B3ABF827C1EDC9009C1B2C /* Lato-BlackItalic.ttf in Resources */,
+				84B3ABF627C1EDC9009C1B2C /* Lato-Bold.ttf in Resources */,
+				84B3ABFC27C1EDC9009C1B2C /* Lato-Italic.ttf in Resources */,
 				8475336E27C1684A001D8662 /* LaunchScreen.storyboard in Resources */,
 				8475336B27C1684A001D8662 /* Assets.xcassets in Resources */,
 				8475336927C16849001D8662 /* Main.storyboard in Resources */,
+				84B3ABFB27C1EDC9009C1B2C /* Lato-Thin.ttf in Resources */,
+				84B3ABFA27C1EDC9009C1B2C /* Lato-LightItalic.ttf in Resources */,
+				84B3ABF927C1EDC9009C1B2C /* Lato-Light.ttf in Resources */,
+				84B3ABFE27C1EDC9009C1B2C /* Lato-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B531C47A0260B2A9F01B349 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zemoga-ios-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93EB602E56F9B4D030F7228E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zemoga-ios-test/Pods-zemoga-ios-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-zemoga-ios-test/Pods-zemoga-ios-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zemoga-ios-test/Pods-zemoga-ios-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8475335A27C16849001D8662 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8475336627C16849001D8662 /* ViewController.swift in Sources */,
+				8475336627C16849001D8662 /* PostListViewController.swift in Sources */,
+				84B3ABC727C1B3B8009C1B2C /* PostListProtocols.swift in Sources */,
+				847CBCC327C37CC10010C052 /* PostDetailProtocols.swift in Sources */,
+				847CBCA727C2B05C0010C052 /* PostListInteractor.swift in Sources */,
+				847CBCAF27C2D3170010C052 /* AppConstants.swift in Sources */,
+				847CBCC927C388680010C052 /* PostDetailsRouter.swift in Sources */,
+				847CBCB627C34DAE0010C052 /* PostsTableViewCell.swift in Sources */,
+				847CBCC527C384EB0010C052 /* UserEntity.swift in Sources */,
 				8475336227C16849001D8662 /* AppDelegate.swift in Sources */,
+				847CBCAB27C2B07A0010C052 /* PostEntity.swift in Sources */,
+				847CBCC127C37A9D0010C052 /* PostDetailViewController.swift in Sources */,
+				847CBCAD27C2B0800010C052 /* PostListRouter.swift in Sources */,
+				847CBCB227C343A40010C052 /* PersistenceUtils.swift in Sources */,
+				8474393727C40E5B00F9C50F /* FavoritesTableViewCell.swift in Sources */,
+				847CBCC727C385240010C052 /* CommentsEntity.swift in Sources */,
+				8474393227C3E0E700F9C50F /* Extension + String.swift in Sources */,
+				847CBCA927C2B06A0010C052 /* PostListPresenter.swift in Sources */,
 				8475336427C16849001D8662 /* SceneDelegate.swift in Sources */,
+				84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */,
+				8474393527C3E8BA00F9C50F /* CommentsTableViewCell.swift in Sources */,
+				847CBCCD27C38A850010C052 /* PostDetailInteractor.swift in Sources */,
+				847CBCCB27C388E70010C052 /* PostDetailPresenter.swift in Sources */,
+				84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */,
+				847CBCB827C358FA0010C052 /* PostStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +617,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -296,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -308,6 +684,7 @@
 		};
 		8475337327C1684A001D8662 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F936A1E52D8092CD9F8E0A0A /* Pods-zemoga-ios-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,6 +697,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +713,7 @@
 		};
 		8475337427C1684A001D8662 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06F7BB3493CD14BC5153348 /* Pods-zemoga-ios-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +726,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
