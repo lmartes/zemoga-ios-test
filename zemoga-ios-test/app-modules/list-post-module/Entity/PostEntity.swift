@@ -8,6 +8,8 @@ struct PostEntity: Mappable {
     private var body: String = ""
     private var status: PostStatus = .pendingReview
     
+    init() {}
+    
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {

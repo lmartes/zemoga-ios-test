@@ -10,6 +10,7 @@
 		2FB262D3C4E62C1D9BD388B2 /* Pods_zemoga_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF43D27E489872C0DB0FEFAD /* Pods_zemoga_ios_test.framework */; };
 		8474393227C3E0E700F9C50F /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474393127C3E0E700F9C50F /* Extension + String.swift */; };
 		8474393527C3E8BA00F9C50F /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474393427C3E8BA00F9C50F /* CommentsTableViewCell.swift */; };
+		8474393727C40E5B00F9C50F /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474393627C40E5B00F9C50F /* FavoritesTableViewCell.swift */; };
 		8475336227C16849001D8662 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336127C16849001D8662 /* AppDelegate.swift */; };
 		8475336427C16849001D8662 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336327C16849001D8662 /* SceneDelegate.swift */; };
 		8475336627C16849001D8662 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475336527C16849001D8662 /* PostListViewController.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		8474393127C3E0E700F9C50F /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		8474393427C3E8BA00F9C50F /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
+		8474393627C40E5B00F9C50F /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		8475335E27C16849001D8662 /* zemoga-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zemoga-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8475336127C16849001D8662 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8475336327C16849001D8662 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */,
+				8474393627C40E5B00F9C50F /* FavoritesTableViewCell.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				847CBCC127C37A9D0010C052 /* PostDetailViewController.swift in Sources */,
 				847CBCAD27C2B0800010C052 /* PostListRouter.swift in Sources */,
 				847CBCB227C343A40010C052 /* PersistenceUtils.swift in Sources */,
+				8474393727C40E5B00F9C50F /* FavoritesTableViewCell.swift in Sources */,
 				847CBCC727C385240010C052 /* CommentsEntity.swift in Sources */,
 				8474393227C3E0E700F9C50F /* Extension + String.swift in Sources */,
 				847CBCA927C2B06A0010C052 /* PostListPresenter.swift in Sources */,
