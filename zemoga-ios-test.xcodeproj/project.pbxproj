@@ -19,6 +19,9 @@
 		847CBCAB27C2B07A0010C052 /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAA27C2B07A0010C052 /* PostEntity.swift */; };
 		847CBCAD27C2B0800010C052 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAC27C2B0800010C052 /* PostListRouter.swift */; };
 		847CBCAF27C2D3170010C052 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCAE27C2D3170010C052 /* AppConstants.swift */; };
+		847CBCB227C343A40010C052 /* PersistenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCB127C343A40010C052 /* PersistenceUtils.swift */; };
+		847CBCB627C34DAE0010C052 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCB527C34DAE0010C052 /* PostsTableViewCell.swift */; };
+		847CBCB827C358FA0010C052 /* PostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBCB727C358FA0010C052 /* PostStatus.swift */; };
 		84B3ABC727C1B3B8009C1B2C /* PostListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */; };
 		84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABC827C1D993009C1B2C /* PostsViewController.swift */; };
 		84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */; };
@@ -48,6 +51,9 @@
 		847CBCAA27C2B07A0010C052 /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
 		847CBCAC27C2B0800010C052 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
 		847CBCAE27C2D3170010C052 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		847CBCB127C343A40010C052 /* PersistenceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceUtils.swift; sourceTree = "<group>"; };
+		847CBCB527C34DAE0010C052 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		847CBCB727C358FA0010C052 /* PostStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStatus.swift; sourceTree = "<group>"; };
 		84B3ABC627C1B3B8009C1B2C /* PostListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListProtocols.swift; sourceTree = "<group>"; };
 		84B3ABC827C1D993009C1B2C /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				847CBCAA27C2B07A0010C052 /* PostEntity.swift */,
+				847CBCB727C358FA0010C052 /* PostStatus.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -165,6 +172,31 @@
 				847CBCAC27C2B0800010C052 /* PostListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		847CBCB027C3437B0010C052 /* app-defaults */ = {
+			isa = PBXGroup;
+			children = (
+				847CBCB127C343A40010C052 /* PersistenceUtils.swift */,
+			);
+			path = "app-defaults";
+			sourceTree = "<group>";
+		};
+		847CBCB327C34D710010C052 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABC827C1D993009C1B2C /* PostsViewController.swift */,
+				847CBCB527C34DAE0010C052 /* PostsTableViewCell.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		847CBCB427C34D7D0010C052 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		84B3ABC327C1B33E009C1B2C /* list-post-module */ = {
@@ -184,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				8475336527C16849001D8662 /* PostListViewController.swift */,
-				84B3ABC827C1D993009C1B2C /* PostsViewController.swift */,
-				84B3ABCA27C1D9A4009C1B2C /* FavoritesViewController.swift */,
+				847CBCB327C34D710010C052 /* Posts */,
+				847CBCB427C34D7D0010C052 /* Favorites */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,8 +233,9 @@
 		84B3ABCC27C1E84B009C1B2C /* common-utils */ = {
 			isa = PBXGroup;
 			children = (
-				84B3AC0027C204F1009C1B2C /* app-constants */,
 				84B3ABCD27C1E871009C1B2C /* ui-utils */,
+				84B3AC0027C204F1009C1B2C /* app-constants */,
+				847CBCB027C3437B0010C052 /* app-defaults */,
 			);
 			path = "common-utils";
 			sourceTree = "<group>";
@@ -386,13 +419,16 @@
 				84B3ABC727C1B3B8009C1B2C /* PostListProtocols.swift in Sources */,
 				847CBCA727C2B05C0010C052 /* PostListInteractor.swift in Sources */,
 				847CBCAF27C2D3170010C052 /* AppConstants.swift in Sources */,
+				847CBCB627C34DAE0010C052 /* PostsTableViewCell.swift in Sources */,
 				8475336227C16849001D8662 /* AppDelegate.swift in Sources */,
 				847CBCAB27C2B07A0010C052 /* PostEntity.swift in Sources */,
 				847CBCAD27C2B0800010C052 /* PostListRouter.swift in Sources */,
+				847CBCB227C343A40010C052 /* PersistenceUtils.swift in Sources */,
 				847CBCA927C2B06A0010C052 /* PostListPresenter.swift in Sources */,
 				8475336427C16849001D8662 /* SceneDelegate.swift in Sources */,
 				84B3ABCB27C1D9A4009C1B2C /* FavoritesViewController.swift in Sources */,
 				84B3ABC927C1D994009C1B2C /* PostsViewController.swift in Sources */,
+				847CBCB827C358FA0010C052 /* PostStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,18 +12,31 @@ class PostListViewController: UIViewController {
         super.viewDidLoad()
         PostListRouter.createPostListModule(postListReference: self)
         presenter?.startFetchigPostList()
-        setupView()
     }
-    
+
+}
+
+//MARK: - PresenterToView
+extension PostListViewController: PresenterToViewPostListProtocol {
     func setupView() {
         setupSegmentedControl()
         updateView()
     }
     
+    func setupViewWithError(_ error: Error) {
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription + ". Please try again.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+}
+
+//MARK: - Segmented Control
+extension PostListViewController {
     private func setupSegmentedControl() {
         postSegmentedControl.removeAllSegments()
-        postSegmentedControl.insertSegment(withTitle: titles.allPost.rawValue, at: 0, animated: false)
-        postSegmentedControl.insertSegment(withTitle: titles.favoritesPost.rawValue, at: 1, animated: false)
+        postSegmentedControl.insertSegment(withTitle: Titles.allPost.rawValue, at: 0, animated: false)
+        postSegmentedControl.insertSegment(withTitle: Titles.favoritesPost.rawValue, at: 1, animated: false)
         postSegmentedControl.selectedSegmentIndex = 0
         postSegmentedControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
         postSegmentedControl.backgroundColor = .clear
@@ -62,10 +75,8 @@ class PostListViewController: UIViewController {
         if postsViewController != nil {
             return postsViewController!
         }
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let childViewController = storyboard.instantiateViewController(withIdentifier: Identifier.postsViewController)
-        
+        let childViewController = storyboard.instantiateViewController(withIdentifier: Identifiers.postsViewController)
         postsViewController = childViewController
         return postsViewController!
     }
@@ -80,8 +91,7 @@ class PostListViewController: UIViewController {
             return favoritesViewController!
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let childViewController = storyboard.instantiateViewController(withIdentifier: Identifier.favoritesViewController)
-        
+        let childViewController = storyboard.instantiateViewController(withIdentifier: Identifiers.favoritesViewController)
         favoritesViewController = childViewController
         return favoritesViewController!
     }
@@ -109,18 +119,6 @@ class PostListViewController: UIViewController {
         let bottomConstraint = postListContentView.bottomAnchor.constraint(equalTo: childViewController.view.bottomAnchor)
         let traillingConstraint = postListContentView.trailingAnchor.constraint(equalTo: childViewController.view.trailingAnchor)
         return [topConstraint, traillingConstraint, bottomConstraint, leadingConstraint]
-    }
-
-}
-
-//MARK: - PresenterToView
-extension PostListViewController: PresenterToViewPostListProtocol {
-    func showPostList(with posts: [PostEntity]) {
-        print("Showing post list")
-    }
-    
-    func showError(_ error: Error) {
-        print("show error post list")
     }
     
 }

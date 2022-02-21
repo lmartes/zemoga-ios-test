@@ -10,8 +10,8 @@ protocol ViewToPresenterPostListProtocol: AnyObject {
 }
 
 protocol PresenterToViewPostListProtocol: AnyObject {
-    func showPostList(with posts: [PostEntity])
-    func showError(_ error: Error)
+    func setupView()
+    func setupViewWithError(_ error: Error)
 }
 
 protocol PresenterToInteractorPostListProtocol: AnyObject {
@@ -25,6 +25,6 @@ protocol PresenterToRouterPostListProtocol: AnyObject {
 }
 
 protocol InteractorToPresenterPostListProtocol: AnyObject {
-    func postListFetchedSuccess(posts: [PostEntity])
+    func postListFetchedSuccess()
     func postListFetchFailed(with error : Error)
 }

@@ -17,12 +17,12 @@ class PostListPresenter: ViewToPresenterPostListProtocol {
 }
 
 extension PostListPresenter: InteractorToPresenterPostListProtocol {
-    func postListFetchedSuccess(posts: [PostEntity]) {
-        print("list post success")
+    func postListFetchedSuccess() {
+        view?.setupView()
     }
     
     func postListFetchFailed(with error: Error) {
-        print("list post error")
+        view?.setupViewWithError(error)
     }
     
     
