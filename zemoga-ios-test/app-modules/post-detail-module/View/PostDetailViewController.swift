@@ -11,6 +11,8 @@ class PostDetailViewController: UIViewController {
     @IBOutlet weak var commentsTableView: UITableView!
     
     var presenter: ViewToPresenterPostDetailProtocol?
+    private var persistenceUtils: PersistenceUtils = PersistenceUtils()
+    private var post: PostEntity = PostEntity()
     private var comments: [CommentsEntity] = []
     
     override func viewDidLoad() {
@@ -21,7 +23,9 @@ class PostDetailViewController: UIViewController {
     private func setup() {
         setDelegates()
         removeSectionHeaderTopPadding()
+        markPostRead()
         requestData()
+        setupNavigationBar()
     }
     
     private func setDelegates() {
@@ -35,12 +39,59 @@ class PostDetailViewController: UIViewController {
         }
     }
     
+    private func markPostRead() {
+        setPostStatus(status: .notFavorite)
+    }
+    
     private func requestData() {
         SVProgressHUD.show(withStatus: "Loading data...")
         presenter?.startFetchigPostDetails()
     }
     
+    private func setupNavigationBar() {
+        self.navigationItem.title = "Post"
+        let deletePost = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deletePost))
+        let addFavorites = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFavoritesTapped))
+        self.navigationItem.rightBarButtonItems = [deletePost, addFavorites]
+    }
+    
+    @objc private func deletePost() {
+        var allPostUpdated = persistenceUtils.getUserDefaults()
+        allPostUpdated.removeAll { $0.getId() == post.getId() }
+        persistenceUtils.removeUserDefaults()
+        persistenceUtils.saveUserDefaults(allPostUpdated)
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @objc private func addFavoritesTapped() {
+        setPostStatus(status: .isFavorite)
+    }
+    
+    private func setPostStatus(status: PostStatus) {
+        var updatePost = post
+        updatePost.setStatus(status)
+        var allPostUpdated = persistenceUtils.getUserDefaults()
+        if let index = allPostUpdated.firstIndex(where: { $0.getId() == post.getId() }) {
+            allPostUpdated[index] = updatePost
+        }
+        persistenceUtils.removeUserDefaults()
+        persistenceUtils.saveUserDefaults(allPostUpdated)
+    }
+    
+}
+
+//MARK: - PresenterToView
+extension PostDetailViewController: PresenterToViewPostDetailProtocol {
+    func setupView(post: PostEntity, user: UserEntity, comments: [CommentsEntity]) {
+        SVProgressHUD.dismiss()
+        setupPostSection(post)
+        setupUserSection(user)
+        setupDataForCommentsSection(comments)
+        showContent()
+    }
+    
     private func setupPostSection(_ post: PostEntity) {
+        self.post = post
         descriptionPost.text = post.getBody().firstCapitalized
     }
     
@@ -58,18 +109,6 @@ class PostDetailViewController: UIViewController {
     
     private func showContent() {
         contentStackView.isHidden = false
-    }
-    
-}
-
-//MARK: - PresenterToView
-extension PostDetailViewController: PresenterToViewPostDetailProtocol {
-    func setupView(post: PostEntity, user: UserEntity, comments: [CommentsEntity]) {
-        SVProgressHUD.dismiss()
-        setupPostSection(post)
-        setupUserSection(user)
-        setupDataForCommentsSection(comments)
-        showContent()
     }
     
     func setupViewWithError(_ error: Error, endpoint: String) {

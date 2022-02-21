@@ -27,10 +27,15 @@ struct Icons {
     static let starFill = "star.fill"
 }
 
+struct Storyboards {
+    static let main = "Main"
+}
+
 struct Identifiers {
     static let postsViewController = "PostsViewControllerIdentifier"
     static let postsCell = "postCellIdentifier"
     static let favoritesViewController = "FavoritesViewControllerIdentifier"
+    static let favoritesCell = "favoritesCellIdentifier"
     static let postDetailViewController = "PostDetailViewControllerIdentifier"
     static let commentsCell = "commentsCellIdentifier"
 }

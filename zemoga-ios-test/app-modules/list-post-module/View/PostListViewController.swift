@@ -27,6 +27,11 @@ class PostListViewController: UIViewController {
         SVProgressHUD.show(withStatus: "Loading posts...")
         presenter?.startFetchigPostList()
     }
+    
+    func refreshView() {
+        removeFirtsChildViewController()
+        updateView()
+    }
 
 }
 
@@ -91,11 +96,12 @@ extension PostListViewController {
         if postsViewController != nil {
             return postsViewController!
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: Storyboards.main, bundle: nil)
         let childViewController = storyboard.instantiateViewController(withIdentifier: Identifiers.postsViewController)
         postsViewController = childViewController
         if let postsViewController = childViewController as? PostsViewController {
             postsViewController.presenter = presenter
+            
         }
         return postsViewController!
     }
@@ -109,7 +115,7 @@ extension PostListViewController {
         if favoritesViewController != nil {
             return favoritesViewController!
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: Storyboards.main, bundle: nil)
         let childViewController = storyboard.instantiateViewController(withIdentifier: Identifiers.favoritesViewController)
         favoritesViewController = childViewController
         return favoritesViewController!
