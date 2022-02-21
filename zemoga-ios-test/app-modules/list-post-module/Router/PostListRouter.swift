@@ -12,7 +12,11 @@ class PostListRouter: PresenterToRouterPostListProtocol {
     }
     
     func pushToPostDetail(with post: PostEntity, from view: UIViewController) {
-        print("Push to post details screen")
+        guard let postDetailViewController = view.storyboard?.instantiateViewController(withIdentifier: Identifiers.postDetailViewController) as? PostDetailViewController else {
+            return
+        }
+        PostDetailRouter.createdPostDetailModule(postDetailReference: postDetailViewController, and: post)
+        view.navigationController?.pushViewController(postDetailViewController, animated: true)
     }
     
 }

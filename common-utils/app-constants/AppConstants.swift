@@ -1,6 +1,8 @@
 import Foundation
 
-let API_POST_LIST = "https://jsonplaceholder.typicode.com/posts"
+let API_GET_POST_LIST = "https://jsonplaceholder.typicode.com/posts"
+let API_GET_USER = "https://jsonplaceholder.typicode.com/users?id="
+let API_GET_COMMENTS = "https://jsonplaceholder.typicode.com/comments?postId="
 
 enum Titles: String {
     case allPost = "All"
@@ -29,6 +31,8 @@ struct Identifiers {
     static let postsViewController = "PostsViewControllerIdentifier"
     static let postsCell = "postCellIdentifier"
     static let favoritesViewController = "FavoritesViewControllerIdentifier"
+    static let postDetailViewController = "PostDetailViewControllerIdentifier"
+    static let commentsCell = "commentsCellIdentifier"
 }
 
 struct UserDefaultsKeys {

@@ -1,4 +1,5 @@
 import UIKit
+import SVProgressHUD
 
 class PostListViewController: UIViewController {
     @IBOutlet weak var postSegmentedControl: UISegmentedControl!
@@ -10,7 +11,20 @@ class PostListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    private func setup() {
+        createInitialModule()
+        requestPostList()
+    }
+    
+    private func createInitialModule() {
         PostListRouter.createPostListModule(postListReference: self)
+    }
+    
+    private func requestPostList() {
+        SVProgressHUD.show(withStatus: "Loading posts...")
         presenter?.startFetchigPostList()
     }
 
@@ -19,13 +33,15 @@ class PostListViewController: UIViewController {
 //MARK: - PresenterToView
 extension PostListViewController: PresenterToViewPostListProtocol {
     func setupView() {
+        SVProgressHUD.dismiss()
         setupSegmentedControl()
         updateView()
     }
     
     func setupViewWithError(_ error: Error) {
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription + ". Please try again.", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        SVProgressHUD.dismiss()
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription + " Please try again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -44,11 +60,11 @@ extension PostListViewController {
         postSegmentedControl.layer.borderWidth = 1
         postSegmentedControl.layer.borderColor = UIColor.systemGreen.cgColor
         postSegmentedControl.setTitleTextAttributes(
-            [NSAttributedString.Key.font : UIFont(name: LatoFonts.regular, size: 16)!,
+            [NSAttributedString.Key.font: UIFont(name: LatoFonts.regular, size: 16)!,
              NSAttributedString.Key.foregroundColor: UIColor.systemGreen],
             for: .normal)
         postSegmentedControl.setTitleTextAttributes(
-            [NSAttributedString.Key.font : UIFont(name: LatoFonts.regular, size: 16)!,
+            [NSAttributedString.Key.font: UIFont(name: LatoFonts.regular, size: 16)!,
              NSAttributedString.Key.foregroundColor: UIColor.systemBackground],
             for: .selected)
     }
@@ -78,6 +94,9 @@ extension PostListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let childViewController = storyboard.instantiateViewController(withIdentifier: Identifiers.postsViewController)
         postsViewController = childViewController
+        if let postsViewController = childViewController as? PostsViewController {
+            postsViewController.presenter = presenter
+        }
         return postsViewController!
     }
     

@@ -1,10 +1,14 @@
 import UIKit
+import SVProgressHUD
 
 class PostsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    var presenter: ViewToPresenterPostListProtocol?
     private var persistenceUtils: PersistenceUtils = PersistenceUtils()
     private var allPosts: [PostEntity] = []
+    private var timer: Timer = Timer()
+    private var counter: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,18 @@ class PostsViewController: UIViewController {
     }
 
     @IBAction func deleteAllPosts(_ sender: Any) {
+        SVProgressHUD.show(withStatus: "Deleting posts...")
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.counter += 1
+            if self.counter == 2 {
+                SVProgressHUD.dismiss()
+                timer.invalidate()
+                self.deleteData()
+            }
+        }
+    }
+    
+    private func deleteData() {
         persistenceUtils.removeUserDefaults()
         allPosts = persistenceUtils.getUserDefaults()
         tableView.reloadData()
@@ -43,5 +59,8 @@ extension PostsViewController: UITableViewDelegate, UITableViewDataSource {
         return postsCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showPostDetail(with: allPosts[indexPath.row], from: self)
+    }
     
 }
