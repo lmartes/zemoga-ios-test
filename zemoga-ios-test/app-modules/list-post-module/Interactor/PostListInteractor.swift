@@ -4,8 +4,14 @@ import ObjectMapper
 
 class PostListInteractor: PresenterToInteractorPostListProtocol {
     var presenter: InteractorToPresenterPostListProtocol?
+    private var persistenceUtils: PersistenceUtils = PersistenceUtils()
     
     func fetchPostList() {
+        if persistenceUtils.postListOnUserDefaultsIsEmpty() == false {
+            presenter?.postListFetchedSuccess()
+            return
+        }
+        
         AF.request(API_POST_LIST).response { (response) in
             self.handleResponse(requestResponse: response)
         }
@@ -18,7 +24,9 @@ class PostListInteractor: PresenterToInteractorPostListProtocol {
         }
         
         if let data = requestResponse.data {
-            presenter?.postListFetchedSuccess(posts: parseJSON(data))
+            let allPosts = parseJSON(data)
+            persistenceUtils.saveUserDefaults(allPosts)
+            presenter?.postListFetchedSuccess()
         }
     }
     

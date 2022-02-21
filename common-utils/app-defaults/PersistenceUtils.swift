@@ -16,11 +16,11 @@ class PersistenceUtils {
         guard let postListDefaults = userDefaults.string(forKey: UserDefaultsKeys.postsList) else {
             return []
         }
-        guard let userList = Mapper<PostEntity>().mapArray(JSONString: postListDefaults) else {
+        guard let postList = Mapper<PostEntity>().mapArray(JSONString: postListDefaults) else {
             print("parseJSON Error: Could not map response")
             return []
         }
-        return userList
+        return postList
     }
     
     func removeUserDefaults() {
