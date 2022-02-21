@@ -5,7 +5,7 @@ class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var statusIcon: UIImageView!
     
     func setupCell(with post: PostEntity) {
-        title.text = post.getTitle().capitalized
+        title.text = post.getTitle().firstCapitalized
         statusIcon.image = setIcon(status: post.getStatus())
     }
     
