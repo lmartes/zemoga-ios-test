@@ -2,7 +2,7 @@ import Foundation
 
 let API_POST_LIST = "https://jsonplaceholder.typicode.com/posts"
 
-enum titles: String {
+enum Titles: String {
     case allPost = "All"
     case favoritesPost = "Favorites"
 }
@@ -20,7 +20,17 @@ struct LatoFonts {
     static let thinItalic = "Lato-ThinItalic"
 }
 
-struct Identifier {
+struct Icons {
+    static let circleFill = "circle.fill"
+    static let starFill = "star.fill"
+}
+
+struct Identifiers {
     static let postsViewController = "PostsViewControllerIdentifier"
+    static let postsCell = "postCellIdentifier"
     static let favoritesViewController = "FavoritesViewControllerIdentifier"
+}
+
+struct UserDefaultsKeys {
+    static let postsList = "PostsListDefaults"
 }
