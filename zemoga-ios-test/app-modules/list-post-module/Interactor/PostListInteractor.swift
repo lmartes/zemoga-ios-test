@@ -12,7 +12,7 @@ class PostListInteractor: PresenterToInteractorPostListProtocol {
             return
         }
         
-        AF.request(API_POST_LIST).response { (response) in
+        AF.request(API_GET_POST_LIST).response { (response) in
             self.handleResponse(requestResponse: response)
         }
     }
@@ -33,7 +33,7 @@ class PostListInteractor: PresenterToInteractorPostListProtocol {
     private func parseJSON(_ postListData: Data) -> [PostEntity] {
         let data = String(decoding: postListData, as: UTF8.self)
         guard let decoderData = Mapper<PostEntity>().mapArray(JSONString: data) else {
-            print("parseJSON Error: Could not map response")
+            print("parseJSON Error: Could not map response to commentsData")
             return []
         }
         return decoderData
