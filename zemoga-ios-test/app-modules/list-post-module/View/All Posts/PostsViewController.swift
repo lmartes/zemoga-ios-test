@@ -38,9 +38,13 @@ class PostsViewController: UIViewController {
         }
     }
     
-    //TODO: - This method must be on the interactor. Then after deleting the data this view is notified with the data to be displayed (empty).
     private func deleteData() {
         persistenceUtils.removeUserDefaults()
+        allPosts = persistenceUtils.getUserDefaults()
+        tableView.reloadData()
+    }
+    
+    func refreshView() {
         allPosts = persistenceUtils.getUserDefaults()
         tableView.reloadData()
     }

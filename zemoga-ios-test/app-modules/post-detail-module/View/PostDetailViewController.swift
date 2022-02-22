@@ -12,7 +12,7 @@ class PostDetailViewController: UIViewController {
     
     var presenter: ViewToPresenterPostDetailProtocol?
     private var persistenceUtils: PersistenceUtils = PersistenceUtils()
-    private var post: PostEntity = PostEntity()
+    private var post: PostEntity?
     private var comments: [CommentsEntity] = []
     
     override func viewDidLoad() {
@@ -20,10 +20,18 @@ class PostDetailViewController: UIViewController {
         setup()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if let postListViewController = navigationController?.viewControllers.filter( { $0 is PostListViewController }).first {
+            guard let postListViewController = postListViewController as? PostListViewController else {
+                return
+            }
+            postListViewController.refreshPostsSection()
+        }
+    }
+    
     private func setup() {
         setDelegates()
         removeSectionHeaderTopPadding()
-        markPostRead()
         requestData()
         setupNavigationBar()
     }
@@ -37,10 +45,6 @@ class PostDetailViewController: UIViewController {
         if #available(iOS 15.0, *) {
             commentsTableView.sectionHeaderTopPadding = 0
         }
-    }
-    
-    private func markPostRead() {
-        setPostStatus(status: .notFavorite)
     }
     
     private func requestData() {
@@ -57,10 +61,17 @@ class PostDetailViewController: UIViewController {
     
     @objc private func deletePost() {
         var allPostUpdated = persistenceUtils.getUserDefaults()
-        allPostUpdated.removeAll { $0.getId() == post.getId() }
+        allPostUpdated.removeAll { $0.getId() == post?.getId() }
         persistenceUtils.removeUserDefaults()
         persistenceUtils.saveUserDefaults(allPostUpdated)
-        self.navigationController?.popToRootViewController(animated: true)
+        
+        if let postListViewController = navigationController?.viewControllers.filter( { $0 is PostListViewController }).first {
+            guard let postListViewController = postListViewController as? PostListViewController else {
+                return
+            }
+            postListViewController.refreshPostsSection()
+            navigationController?.popToViewController(postListViewController, animated: true)
+        }
     }
     
     @objc private func addFavoritesTapped() {
@@ -68,14 +79,15 @@ class PostDetailViewController: UIViewController {
     }
     
     private func setPostStatus(status: PostStatus) {
-        var updatePost = post
-        updatePost.setStatus(status)
-        var allPostUpdated = persistenceUtils.getUserDefaults()
-        if let index = allPostUpdated.firstIndex(where: { $0.getId() == post.getId() }) {
-            allPostUpdated[index] = updatePost
+        post?.setStatus(status)
+        var allPost = persistenceUtils.getUserDefaults()
+        if let index = allPost.firstIndex(where: { $0.getId() == post?.getId() }) {
+            if let post = post {
+                allPost[index] = post
+            }
         }
         persistenceUtils.removeUserDefaults()
-        persistenceUtils.saveUserDefaults(allPostUpdated)
+        persistenceUtils.saveUserDefaults(allPost)
     }
     
 }
@@ -93,6 +105,11 @@ extension PostDetailViewController: PresenterToViewPostDetailProtocol {
     private func setupPostSection(_ post: PostEntity) {
         self.post = post
         descriptionPost.text = post.getBody().firstCapitalized
+        markPostRead()
+    }
+    
+    private func markPostRead() {
+        setPostStatus(status: .notFavorite)
     }
     
     private func setupUserSection(_ user: UserEntity) {
