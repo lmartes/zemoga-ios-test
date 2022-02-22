@@ -18,6 +18,11 @@ This module shows detailed information of selected post, it appears here:
 - User information. This information is queried from the endpoint ```/users?id```.
 - Post comments list. This information is queried from the endpoint ```/comments?postId```.
 
+The actions that the user can perform in this module are:
+- 🗑 Delete a post.
+- ⭐ Add a post as a favorite.
+> This information is stored in the userDefaults of the app.
+
 # Architecture
 In this application I've implemented the viper clean architecture pattern, being this the best scalable, sustainable and testable pattern; being able to develop different modules and submodules of the app in a more orderly way and closer to the implementation of solid principles, clean code and good practices in software development.
 
