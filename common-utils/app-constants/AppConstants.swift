@@ -32,6 +32,7 @@ struct Storyboards {
 }
 
 struct Identifiers {
+    static let postListViewController = "PostListViewControllerIdentifier"
     static let postsViewController = "PostsViewControllerIdentifier"
     static let postsCell = "postCellIdentifier"
     static let favoritesViewController = "FavoritesViewControllerIdentifier"

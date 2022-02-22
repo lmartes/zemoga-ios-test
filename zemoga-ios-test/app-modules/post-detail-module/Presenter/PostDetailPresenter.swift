@@ -16,10 +16,7 @@ class PostDetailPresenter: ViewToPresenterPostDetailProtocol {
 }
 
 extension PostDetailPresenter: InteractorToPresenterPostDetailProtocol {
-    func dataBasedOnPostFetchedSuccess(user: UserEntity, comments: [CommentsEntity]) {
-        guard let post = post else {
-            return
-        }
+    func dataBasedOnPostFetchedSuccess(post: PostEntity, user: UserEntity, comments: [CommentsEntity]) {
         view?.setupView(post: post, user: user, comments: comments)
     }
     

@@ -28,9 +28,15 @@ class PostListViewController: UIViewController {
         presenter?.startFetchigPostList()
     }
     
-    func refreshView() {
-        removeFirtsChildViewController()
-        updateView()
+    @IBAction func refreshView(_ sender: Any) {
+        refreshPostsSection()
+    }
+    
+    func refreshPostsSection() {
+        guard let childViewController = self.children.first as? PostsViewController else {
+            return
+        }
+        childViewController.refreshView()
     }
 
 }

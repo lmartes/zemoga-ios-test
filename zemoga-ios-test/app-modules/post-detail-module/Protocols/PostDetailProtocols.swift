@@ -22,6 +22,6 @@ protocol PresenterToRouterPostDetailProtocol: AnyObject {
 }
 
 protocol InteractorToPresenterPostDetailProtocol: AnyObject {
-    func dataBasedOnPostFetchedSuccess(user: UserEntity, comments: [CommentsEntity])
+    func dataBasedOnPostFetchedSuccess(post: PostEntity, user: UserEntity, comments: [CommentsEntity])
     func dataBasedOnPostFetchedFailed(with error: Error, endpoint: String)
 }
