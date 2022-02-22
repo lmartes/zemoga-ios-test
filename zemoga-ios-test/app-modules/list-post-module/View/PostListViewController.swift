@@ -28,9 +28,24 @@ class PostListViewController: UIViewController {
         presenter?.startFetchigPostList()
     }
     
-    func refreshView() {
-        removeFirtsChildViewController()
+    @IBAction func refreshView(_ sender: Any) {
+        presenter?.startUpdatingPostList()
+    }
+    
+    func refreshPostsSection() {
+        guard let childViewController = self.children.first as? PostsViewController else {
+            return
+        }
+        childViewController.refreshView()
+    }
+    
+    func refreshFavoritesSection() {
+        postSegmentedControl.selectedSegmentIndex = 1
         updateView()
+        guard let favoritesViewController = getFavoritesViewController() as? FavoritesViewController else {
+            return
+        }
+        favoritesViewController.refreshView()
     }
 
 }
@@ -41,6 +56,10 @@ extension PostListViewController: PresenterToViewPostListProtocol {
         SVProgressHUD.dismiss()
         setupSegmentedControl()
         updateView()
+    }
+    
+    func refreshView() {
+        refreshPostsSection()
     }
     
     func setupViewWithError(_ error: Error) {

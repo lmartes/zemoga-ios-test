@@ -10,6 +10,10 @@ class PostListPresenter: ViewToPresenterPostListProtocol {
         interactor?.fetchPostList()
     }
     
+    func startUpdatingPostList() {
+        interactor?.updatePostList()
+    }
+    
     func showPostDetail(with post: PostEntity, from view: UIViewController) {
         router?.pushToPostDetail(with: post, from: view)
     }
@@ -21,9 +25,12 @@ extension PostListPresenter: InteractorToPresenterPostListProtocol {
         view?.setupView()
     }
     
+    func updatePostListFetchedSuccess() {
+        view?.refreshView()
+    }
+    
     func postListFetchFailed(with error: Error) {
         view?.setupViewWithError(error)
     }
-    
     
 }

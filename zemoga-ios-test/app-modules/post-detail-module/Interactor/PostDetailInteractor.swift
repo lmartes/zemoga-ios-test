@@ -4,10 +4,12 @@ import ObjectMapper
 
 class PostDetailInteractor: PresenterToInteractorPostDetailProtocol {
     var presenter: InteractorToPresenterPostDetailProtocol?
+    private var post: PostEntity?
     private var user: UserEntity?
     private var comments: [CommentsEntity] = []
     
     func fetchDataBasedOnPost(_ post: PostEntity) {
+        self.post = post
         startRequests(userId: post.getUserId(), postId: post.getId())
     }
     
@@ -41,8 +43,8 @@ class PostDetailInteractor: PresenterToInteractorPostDetailProtocol {
     private func requestComments(postId: Int) {
         AF.request(API_GET_COMMENTS + "\(postId)").response { (response) in
             self.handleCommentsResponse(requestResponse: response)
-            if let user = self.user {
-                self.presenter?.dataBasedOnPostFetchedSuccess(user: user, comments: self.comments)
+            if let user = self.user, let post = self.post {
+                self.presenter?.dataBasedOnPostFetchedSuccess(post: post, user: user, comments: self.comments)
             }
         }
     }

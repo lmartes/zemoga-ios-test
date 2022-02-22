@@ -25,6 +25,7 @@ struct LatoFonts {
 struct Icons {
     static let circleFill = "circle.fill"
     static let starFill = "star.fill"
+    static let star = "star"
 }
 
 struct Storyboards {
@@ -32,6 +33,7 @@ struct Storyboards {
 }
 
 struct Identifiers {
+    static let postListViewController = "PostListViewControllerIdentifier"
     static let postsViewController = "PostsViewControllerIdentifier"
     static let postsCell = "postCellIdentifier"
     static let favoritesViewController = "FavoritesViewControllerIdentifier"
