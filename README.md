@@ -1,5 +1,5 @@
 # zemoga-ios-test
-This project is a mobil test for Zemoga, the goal is consumes the free resources of the API https://jsonplaceholder.typicode.com/ and create an app that displays its data.
+This project is a mobile test for Zemoga, the goal is consumes the free resources of the API https://jsonplaceholder.typicode.com/ and create an app that displays its data.
 
 # Demo
 https://user-images.githubusercontent.com/63270114/155180928-e026c1e9-d384-4b6b-8f6a-3cd779040b25.mp4
