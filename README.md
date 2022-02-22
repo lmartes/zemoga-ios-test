@@ -13,7 +13,7 @@ This module has 2 submodules:
 - Favorites Post: Lists all favorite posts saved in ```userDefaults``` of the app.
 
 ## Post Details
-This module shows detailed information of selected post, it appears here:
+This module display detailed information of selected post, it appears here:
 - Message body content.
 - User information. This information is queried from the endpoint ```/users?id```.
 - Post comments list. This information is queried from the endpoint ```/comments?postId```.
