@@ -25,6 +25,7 @@ struct LatoFonts {
 struct Icons {
     static let circleFill = "circle.fill"
     static let starFill = "star.fill"
+    static let star = "star"
 }
 
 struct Storyboards {

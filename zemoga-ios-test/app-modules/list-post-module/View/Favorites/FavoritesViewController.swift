@@ -27,6 +27,11 @@ class FavoritesViewController: UIViewController {
         favoritesPost = allPost.filter { $0.getStatus() == .isFavorite }
     }
     
+    func refreshView() {
+        getFavoritesPost()
+        favoritesTableView.reloadData()
+    }
+    
 }
 
 //MARK: - Table View Delegates
@@ -42,6 +47,5 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         favoritesCell.setupCell(post: favoritesPost[indexPath.row])
         return favoritesCell
     }
-    
     
 }

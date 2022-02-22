@@ -55,7 +55,7 @@ class PostDetailViewController: UIViewController {
     private func setupNavigationBar() {
         self.navigationItem.title = "Post"
         let deletePost = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deletePost))
-        let addFavorites = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFavoritesTapped))
+        let addFavorites = UIBarButtonItem(image: UIImage(systemName: Icons.star), style: .done, target: self, action: #selector(addFavoritesTapped))
         self.navigationItem.rightBarButtonItems = [deletePost, addFavorites]
     }
     
@@ -65,17 +65,25 @@ class PostDetailViewController: UIViewController {
         persistenceUtils.removeUserDefaults()
         persistenceUtils.saveUserDefaults(allPostUpdated)
         
-        if let postListViewController = navigationController?.viewControllers.filter( { $0 is PostListViewController }).first {
+        if let postListViewController = self.navigationController?.viewControllers.filter( { $0 is PostListViewController }).first {
             guard let postListViewController = postListViewController as? PostListViewController else {
                 return
             }
             postListViewController.refreshPostsSection()
-            navigationController?.popToViewController(postListViewController, animated: true)
+            self.navigationController?.popToViewController(postListViewController, animated: true)
         }
     }
     
     @objc private func addFavoritesTapped() {
         setPostStatus(status: .isFavorite)
+        if let postListViewController = self.navigationController?.viewControllers.filter( { $0 is PostListViewController }).first {
+            guard let postListViewController = postListViewController as? PostListViewController else {
+                return
+            }
+            postListViewController.refreshPostsSection()
+            postListViewController.refreshFavoritesSection()
+            self.navigationController?.popToViewController(postListViewController, animated: true)
+        }
     }
     
     private func setPostStatus(status: PostStatus) {

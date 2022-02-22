@@ -38,6 +38,15 @@ class PostListViewController: UIViewController {
         }
         childViewController.refreshView()
     }
+    
+    func refreshFavoritesSection() {
+        postSegmentedControl.selectedSegmentIndex = 1
+        updateView()
+        guard let favoritesViewController = getFavoritesViewController() as? FavoritesViewController else {
+            return
+        }
+        favoritesViewController.refreshView()
+    }
 
 }
 
