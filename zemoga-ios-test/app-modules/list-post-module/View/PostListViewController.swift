@@ -29,7 +29,7 @@ class PostListViewController: UIViewController {
     }
     
     @IBAction func refreshView(_ sender: Any) {
-        refreshPostsSection()
+        presenter?.startUpdatingPostList()
     }
     
     func refreshPostsSection() {
@@ -47,6 +47,10 @@ extension PostListViewController: PresenterToViewPostListProtocol {
         SVProgressHUD.dismiss()
         setupSegmentedControl()
         updateView()
+    }
+    
+    func refreshView() {
+        refreshPostsSection()
     }
     
     func setupViewWithError(_ error: Error) {
