@@ -7,6 +7,7 @@ class PostsViewController: UIViewController {
     var presenter: ViewToPresenterPostListProtocol?
     private var persistenceUtils: PersistenceUtils = PersistenceUtils()
     private var allPosts: [PostEntity] = []
+    private let refreshControl = UIRefreshControl()
     private var timer: Timer = Timer()
     private var counter: Int = 0
 
@@ -17,6 +18,7 @@ class PostsViewController: UIViewController {
     
     private func setupView() {
         setDelegates()
+        addRefreshControl()
         allPosts = persistenceUtils.getUserDefaults()
         tableView.reloadData()
     }
@@ -24,6 +26,17 @@ class PostsViewController: UIViewController {
     private func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func addRefreshControl() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        presenter?.startUpdatingPostList()
+        refreshControl.endRefreshing()
     }
 
     @IBAction func deleteAllPosts(_ sender: Any) {
